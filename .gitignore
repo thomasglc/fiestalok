@@ -1,0 +1,49 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dépendances (Le dossier le plus lourd, à ne JAMAIS commit)
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Dossier de build et dossiers temporaires
+.cache/
+.parcel-cache/
+.turbo/
+.vercel/
+.nuxt/
+.output/
+
+# Fichiers d'environnement (Contiennent tes clés API, secrets, etc.)
+.env
+.env.local
+.env.*.local
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# IDE / Editeurs (Optionnel, mais recommandé)
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Tests
+/tests/unit/coverage/
+/tests/e2e/reports/
+/cypress/videos/
+/cypress/screenshots/
+
+# Divers
+.npm

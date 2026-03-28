@@ -1,0 +1,27 @@
+<script setup>
+defineProps({
+  name: { type: String, required: true },
+  category: { type: String, required: true },
+  description: { type: String, required: true },
+  alt: { type: String, required: true },
+  badge: { type: String, default: null },
+  emoji: { type: String, default: '🎉' },
+})
+</script>
+
+<template>
+  <article class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col">
+    <div class="relative bg-gradient-to-br from-coral/10 to-coral/5 h-52 flex items-center justify-center overflow-hidden">
+      <span class="text-8xl select-none group-hover:scale-110 transition-transform duration-300" role="img" :aria-label="alt">{{ emoji }}</span>
+      <span
+        v-if="badge"
+        class="absolute top-3 right-3 bg-coral text-white text-xs font-semibold px-3 py-1 rounded-full"
+      >{{ badge }}</span>
+    </div>
+    <div class="p-5 flex flex-col flex-1">
+      <span class="text-xs font-semibold text-coral uppercase tracking-widest mb-1">{{ category }}</span>
+      <h3 class="font-display text-xl font-bold text-deep mb-2 leading-snug">{{ name }}</h3>
+      <p class="text-muted text-sm leading-relaxed flex-1">{{ description }}</p>
+    </div>
+  </article>
+</template>
