@@ -48,11 +48,11 @@ onMounted(() => {
         </div>
         <div class="text-center border-x border-white/10">
           <p class="font-display text-2xl md:text-3xl font-bold text-coral">100%</p>
-          <p class="text-cream/50 text-xs mt-1">Livraison incluse</p>
+          <p class="text-cream/50 text-xs mt-1">Livraison<br />incluse</p>
         </div>
         <div class="text-center">
           <p class="font-display text-3xl font-bold text-coral">Alsace</p>
-          <p class="text-cream/50 text-xs mt-1">Dép. 67 &amp; 68</p>
+          <p class="text-cream/50 text-xs mt-1">Bas-Rhin<br />&amp; Haut-Rhin</p>
         </div>
       </div>
     </div>
