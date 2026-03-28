@@ -25,7 +25,7 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
     ]"
   >
     <div class="max-w-6xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
-      <a href="#" class="font-display text-xl font-bold text-deep">
+      <a href="#" :class="['font-display text-xl font-bold transition-colors', scrolled ? 'text-deep' : 'text-cream']">
         Fiestalo <span class="text-coral">k</span>
       </a>
 
@@ -34,7 +34,7 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
           v-for="link in links"
           :key="link.href"
           :href="link.href"
-          class="text-sm font-medium text-deep/70 hover:text-coral transition-colors"
+          :class="['text-sm font-medium hover:text-coral transition-colors', scrolled ? 'text-deep/70' : 'text-cream/80']"
         >{{ link.label }}</a>
         <BaseButton href="#contact" variant="primary">Devis gratuit</BaseButton>
       </nav>
@@ -44,9 +44,9 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
         aria-label="Menu"
         @click="menuOpen = !menuOpen"
       >
-        <span class="block w-5 h-0.5 bg-deep mb-1.5 transition-all" :class="menuOpen && 'rotate-45 translate-y-2'" />
-        <span class="block w-5 h-0.5 bg-deep mb-1.5 transition-all" :class="menuOpen && 'opacity-0'" />
-        <span class="block w-5 h-0.5 bg-deep transition-all" :class="menuOpen && '-rotate-45 -translate-y-2'" />
+        <span class="block w-5 h-0.5 mb-1.5 transition-all" :class="[scrolled ? 'bg-deep' : 'bg-cream', menuOpen && 'rotate-45 translate-y-2']" />
+        <span class="block w-5 h-0.5 mb-1.5 transition-all" :class="[scrolled ? 'bg-deep' : 'bg-cream', menuOpen && 'opacity-0']" />
+        <span class="block w-5 h-0.5 transition-all" :class="[scrolled ? 'bg-deep' : 'bg-cream', menuOpen && '-rotate-45 -translate-y-2']" />
       </button>
     </div>
 

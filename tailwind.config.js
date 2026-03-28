@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        cream: '#FAFAF7',
-        deep: '#1A1A1A',
-        coral: '#E8593A',
-        'coral-light': '#F07355',
-        'coral-dark': '#C44828',
-        muted: '#6B6B6B',
+        cream: '#FFF7FE',
+        deep: '#1C1040',
+        coral: '#E8197A',
+        'coral-light': '#FF5CAA',
+        'coral-dark': '#B8005C',
+        muted: '#7B6E9E',
       },
       fontFamily: {
         display: ['"Playfair Display"', 'serif'],
