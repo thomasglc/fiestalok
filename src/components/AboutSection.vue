@@ -36,7 +36,7 @@ onMounted(() => {
           <h3 class="font-display font-bold text-lg">Expérience</h3>
           <p class="text-muted text-sm">Des années d'animations festives en Alsace</p>
         </div>
-        <div class="bg-coral/8 rounded-2xl p-6 flex flex-col gap-2 mt-6">
+        <div class="bg-coral/8 rounded-2xl p-6 flex flex-col gap-2 md:mt-6">
           <span class="text-3xl">🚐</span>
           <h3 class="font-display font-bold text-lg">Mobilité</h3>
           <p class="text-muted text-sm">Livraison sur tout le territoire alsacien</p>
@@ -46,7 +46,7 @@ onMounted(() => {
           <h3 class="font-display font-bold text-lg">Sécurité</h3>
           <p class="text-muted text-sm">Matériel certifié et entretenu régulièrement</p>
         </div>
-        <div class="bg-coral/8 rounded-2xl p-6 flex flex-col gap-2 mt-6">
+        <div class="bg-coral/8 rounded-2xl p-6 flex flex-col gap-2 md:mt-6">
           <span class="text-3xl">💬</span>
           <h3 class="font-display font-bold text-lg">Réactivité</h3>
           <p class="text-muted text-sm">Réponse rapide, devis sous 24h</p>
