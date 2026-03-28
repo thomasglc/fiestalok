@@ -30,8 +30,7 @@ onMounted(() => {
         <span class="text-coral">grandeur nature.</span>
       </h1>
       <p class="fade-up text-cream/70 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed" style="transition-delay:0.2s">
-        Châteaux gonflables, tonnelles, photobooths, machines à popcorn —
-        Fiestalo k livre et installe tout en Alsace pour que vous profitiez à 100 %.
+        Location de matériel festif en Alsace — livraison et installation incluses, vous n'avez qu'à profiter.
       </p>
       <div class="fade-up flex flex-col sm:flex-row items-center justify-center gap-4" style="transition-delay:0.3s">
         <BaseButton href="#contact" variant="primary" class="text-base px-8 py-4">
@@ -42,7 +41,7 @@ onMounted(() => {
         </BaseButton>
       </div>
 
-      <div class="fade-up mt-16 grid grid-cols-3 gap-6 max-w-sm mx-auto" style="transition-delay:0.4s">
+      <div class="fade-up mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto" style="transition-delay:0.4s">
         <div class="text-center">
           <p class="font-display text-3xl font-bold text-coral">4</p>
           <p class="text-cream/50 text-xs mt-1">Châteaux gonflables</p>
@@ -52,7 +51,7 @@ onMounted(() => {
           <p class="text-cream/50 text-xs mt-1">Livraison incluse</p>
         </div>
         <div class="text-center">
-          <p class="font-display text-3xl font-bold text-coral">67&amp;68</p>
+          <p class="font-display text-3xl font-bold text-coral">Alsace</p>
           <p class="text-cream/50 text-xs mt-1">Bas &amp; Haut-Rhin</p>
         </div>
       </div>

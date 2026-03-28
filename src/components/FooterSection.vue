@@ -39,8 +39,7 @@ const socials = [
           <p class="text-cream text-sm font-semibold mb-4">Contact</p>
           <address class="not-italic space-y-2 text-sm">
             <p>📍 Strasbourg, Alsace</p>
-            <p>📞 <a href="tel:+33XXXXXXXXX" class="hover:text-coral transition-colors">+33 X XX XX XX XX</a></p>
-            <p>✉️ <a href="mailto:contact@fiestalo-k.fr" class="hover:text-coral transition-colors">contact@fiestalo-k.fr</a></p>
+<p>✉️ <a href="mailto:contact@fiestalo-k.fr" class="hover:text-coral transition-colors">contact@fiestalo-k.fr</a></p>
           </address>
           <div class="flex gap-3 mt-5">
             <a

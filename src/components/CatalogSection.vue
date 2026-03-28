@@ -41,7 +41,7 @@ onMounted(() => {
         :key="cat"
         :class="[
           'px-4 py-2 rounded-full text-sm font-medium transition-all',
-          activeCategory === cat
+          activeCategory.value === cat
             ? 'bg-coral text-white'
             : 'bg-white/10 text-cream/70 hover:bg-white/20',
         ]"
@@ -50,7 +50,7 @@ onMounted(() => {
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div v-for="product in filtered" :key="product.id" class="fade-up">
+      <div v-for="product in filtered" :key="product.id">
         <ProductCard v-bind="product" />
       </div>
     </div>
