@@ -13,8 +13,8 @@ import BaseButton from './base/BaseButton.vue'
       <p class="fade-up text-muted mb-8" style="transition-delay:0.2s">
         Pour toute demande de disponibilité ou de devis, écrivez-nous directement.
       </p>
-      <BaseButton href="mailto:contact@fiestalo-k.fr" variant="primary" class="fade-up text-base px-8 py-4" style="transition-delay:0.3s">
-        contact@fiestalo-k.fr
+      <BaseButton href="mailto:contact@fiestalok.fr" variant="primary" class="fade-up text-base px-8 py-4" style="transition-delay:0.3s">
+        contact@fiestalok.fr
       </BaseButton>
     </div>
   </SectionWrapper>
