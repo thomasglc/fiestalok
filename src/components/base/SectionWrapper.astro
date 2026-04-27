@@ -1,0 +1,15 @@
+---
+const { id, dark = false, narrow = false } = Astro.props;
+---
+
+<section
+  id={id}
+  class:list={[
+    'py-20 px-4 md:px-8',
+    dark ? 'bg-deep text-cream' : 'bg-cream text-deep',
+  ]}
+>
+  <div class:list={['mx-auto', narrow ? 'max-w-3xl' : 'max-w-6xl']}>
+    <slot />
+  </div>
+</section>

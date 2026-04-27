@@ -1,0 +1,78 @@
+---
+const links = [
+  { label: 'À propos', href: '#about' },
+  { label: 'Catalogue', href: '#catalogue' },
+  { label: 'Zone', href: '#zone' },
+  { label: 'Contact', href: '#contact' },
+];
+---
+
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <div class="max-w-6xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
+    <a href="#" class="nav-logo font-display text-xl font-bold text-cream transition-colors">
+      Fiestalo <span class="text-coral">k</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8">
+      {links.map(link => (
+        <a href={link.href} class="nav-link text-sm font-medium text-cream/80 hover:text-coral transition-colors">
+          {link.label}
+        </a>
+      ))}
+      <a href="#contact" class="inline-flex items-center justify-center font-sans font-semibold text-sm tracking-wide px-6 py-3 rounded-full bg-coral text-white hover:bg-coral-dark transition-all duration-200 active:scale-95 focus:outline-none focus:ring-2 focus:ring-coral focus:ring-offset-2">
+        Devis gratuit
+      </a>
+    </nav>
+
+    <button id="menu-btn" class="md:hidden p-2 rounded-lg hover:bg-coral/10 transition-colors" aria-label="Menu">
+      <span id="bar1" class="nav-bar block w-5 h-0.5 mb-1.5 bg-cream transition-all duration-300"></span>
+      <span id="bar2" class="nav-bar block w-5 h-0.5 mb-1.5 bg-cream transition-all duration-300"></span>
+      <span id="bar3" class="nav-bar block w-5 h-0.5 bg-cream transition-all duration-300"></span>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-4 flex-col gap-4">
+    {links.map(link => (
+      <a href={link.href} class="mobile-link text-sm font-medium text-deep/70 hover:text-coral py-1 block">
+        {link.label}
+      </a>
+    ))}
+    <a href="#contact" class="inline-flex items-center justify-center font-sans font-semibold text-sm tracking-wide px-6 py-3 rounded-full bg-coral text-white hover:bg-coral-dark transition-all">
+      Devis gratuit
+    </a>
+  </div>
+</header>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const bar1 = document.getElementById('bar1');
+  const bar2 = document.getElementById('bar2');
+  const bar3 = document.getElementById('bar3');
+  let menuOpen = false;
+
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('nav-scrolled', window.scrollY > 40);
+  });
+
+  menuBtn.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    mobileMenu.classList.toggle('hidden', !menuOpen);
+    mobileMenu.classList.toggle('flex', menuOpen);
+    bar1.style.transform = menuOpen ? 'rotate(45deg) translateY(8px)' : '';
+    bar2.style.opacity = menuOpen ? '0' : '1';
+    bar3.style.transform = menuOpen ? 'rotate(-45deg) translateY(-8px)' : '';
+  });
+
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+      menuOpen = false;
+      mobileMenu.classList.add('hidden');
+      mobileMenu.classList.remove('flex');
+      bar1.style.transform = '';
+      bar2.style.opacity = '1';
+      bar3.style.transform = '';
+    });
+  });
+</script>

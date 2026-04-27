@@ -1,0 +1,65 @@
+---
+import SectionWrapper from './base/SectionWrapper.astro';
+import ProductCard from './base/ProductCard.astro';
+import { products, categories } from '../data/products.js';
+
+const allCategories = ['Tous', ...categories];
+---
+
+<SectionWrapper id="catalogue" dark>
+  <div class="text-center mb-12">
+    <p class="fade-up text-coral text-sm font-semibold uppercase tracking-widest mb-3">Catalogue</p>
+    <h2 class="fade-up font-display text-4xl md:text-5xl font-bold text-cream leading-tight mb-4" style="transition-delay:0.1s">
+      Ce que nous proposons
+    </h2>
+    <p class="fade-up text-cream/60 max-w-xl mx-auto" style="transition-delay:0.2s">
+      Location de matériel festif de qualité professionnelle, livré et installé en Alsace pour animation fête, mariage ou événement d'entreprise.
+    </p>
+  </div>
+
+  <div class="fade-up flex flex-wrap justify-center gap-2 mb-10" style="transition-delay:0.3s">
+    {allCategories.map(cat => (
+      <button
+        data-filter={cat}
+        class:list={[
+          'filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all',
+          cat === 'Tous' ? 'bg-coral text-white' : 'bg-white/10 text-cream/70 hover:bg-white/20',
+        ]}
+      >
+        {cat}
+      </button>
+    ))}
+  </div>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {products.map(product => (
+      <div data-card data-cat={product.category}>
+        <ProductCard {...product} />
+      </div>
+    ))}
+  </div>
+</SectionWrapper>
+
+<script>
+  const buttons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('[data-card]');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const cat = btn.getAttribute('data-filter');
+
+      buttons.forEach(b => {
+        const active = b.getAttribute('data-filter') === cat;
+        b.classList.toggle('bg-coral', active);
+        b.classList.toggle('text-white', active);
+        b.classList.toggle('bg-white/10', !active);
+        b.classList.toggle('text-cream/70', !active);
+      });
+
+      cards.forEach(card => {
+        const match = cat === 'Tous' || card.getAttribute('data-cat') === cat;
+        (card as HTMLElement).style.display = match ? '' : 'none';
+      });
+    });
+  });
+</script>

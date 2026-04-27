@@ -22,3 +22,19 @@
     transform: translateY(0);
   }
 }
+
+/* NavBar scroll state */
+#navbar.nav-scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.08);
+}
+#navbar.nav-scrolled .nav-logo {
+  color: #1C1040;
+}
+#navbar.nav-scrolled .nav-link {
+  color: rgba(28, 16, 64, 0.7);
+}
+#navbar.nav-scrolled .nav-bar {
+  background-color: #1C1040;
+}
